@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EV-Batteries</title>
+
+    <link
+      rel="shortcut icon"
+      href="Images/favicon_Icon.png"
+      type="image/x-icon"
+    />
+
+    <!-- awesome font link -->
+    <link rel="stylesheet" href="AwesomeFont-links/all.min.css" />
+    <script src="AwesomeFont-links/all.min.js"></script>
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+      crossorigin=""
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="Slider-links/css/swiper-bundle.min.css" />
+
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Swiper.js CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar section start -->
+    <nav
+      style="background-color: #f8eded"
+      class="navbar navbar-expand-lg navbar-light"
+    >
+      <div class="container-md">
+        <!-- Logo -->
+        <a class="navbar-brand" href="Home.html"
+          ><div class="logo">
+            <img
+              src="Images/Vroom-Central-Logo.png"
+              width="100%"
+              alt="logo"
+            /></div
+        ></a>
+
+        <!-- Toggle button for mobile view -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="font-weight: 450" href="blog.html"
+                >Featured Article</a
+              >
+            </li>
+            &nbsp;
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                style="font-weight: 450"
+                href="newsarticle.html"
+                >Latest News</a
+              >
+            </li>
+            &nbsp;
+            <li class="nav-item">
+              <a class="nav-link" style="font-weight: 450" href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Buttons to open modals -->
+          <div class="d-flex" style="gap: 8px">
+            <button
+              class="btn btn-primary btn-custom"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+              onclick="document.getElementById('id01').style.display='block'"
+              style="width: auto"
+            >
+              Login/ Register
+            </button>
+          </div>
+
+          <div class="profile-container">
+            <div class="profile-photo">
+              <img src="Images/profile-pic.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar section end -->
+
+    <!-- login popup start -->
+    <div id="id01" class="modal">
+      <div class="modal-content animate">
+        <div class="pop-img-container">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="pop-close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <h4>LogIn/SignUp</h4>
+        </div>
+
+        <div class="pop-container">
+          <form action="" class="text-center">
+            <div class="basic-input-box">
+              <input
+                type="email"
+                id="emails"
+                name="email"
+                placeholder="vc@gmail.com "
+                required
+              />
+              <label class="basic-input-box-title" for="email"
+                >Email Id<sup>*</sup> :</label
+              ><br />
+              <span class="error" id="EmailError">Email Id is required</span>
+            </div>
+
+            <div class="basic-input-box">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+              <label class="basic-input-box-title" for="password"
+                >Password<sup>*</sup> :</label
+              ><br />
+              <span class="error" id="PasswordError">Password is required</span>
+            </div>
+
+            <!-- <p class="text-center m-0">Or</p> -->
+
+            <!-- <div class="basic-input-box form-group form-check">
+              <button class="google-btn">
+                <img
+                  src="Images/google_logo.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <p class="m-0 google-text">Continue With Google</p>
+              </button>
+            </div> -->
+
+            <div class="basic-input-box form-group form-check">
+              <label
+                class="form-check-label"
+                for="exampleCheck1"
+                style="font-size: 12px"
+              >
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                  checked
+                />
+                I have read the
+                <a href="Terms_and_Conditions.html"
+                  >Terms & Conditions</a
+                ></label
+              >
+            </div>
+
+            <div class="basic-input-box btns-group text-center" id="get-otp">
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- login popup end -->
+
+    <!-- Aticle Section Start -->
+    <section
+      class="article-section container-fuild d-flex justify-content-center"
+    >
+      <div class="article-container p-3">
+        <!-- Heading Text Start  -->
+        <h4>
+          The Future of EV Batteries: Innovations and Sustainability Challenges
+        </h4>
+        <h3 style="margin: 0">
+          The Future of EV Batteries: Innovations and Sustainability Challenges
+        </h3>
+        <span style="color: #969696; font-size: 14px; margin-top: -4px"
+          >Published On Feb 19, 2025 06:55:00 PM</span
+        >
+        <!-- Heading Text End   -->
+
+        <!-- hero image section start -->
+        <div
+          style="margin-top: 24px"
+          id="carouselExampleAutoplaying"
+          class="carousel slide hero-container"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              style="
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background-color: #747474;
+              "
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              style="
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background-color: #747474;
+              "
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+          </div>
+
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active position-relative">
+              <img src="Images/EV-Batteries-1.jpg" class="" alt="MG-Image-1" />
+            </div>
+            <div class="carousel-item position-relative">
+              <img src="Images/EV-Batteries-2.jpg" class="" alt="MG-Image-2" />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon p-4"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon p-4"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- hero image section end -->
+        <!-- passage text-1 -->
+        <p class="" style="font-size: 17px; margin-top: 24px">
+          Electric Vehicles (EVs) are at the forefront of the global transition
+          to clean mobility, and <b>battery technology</b> is the key driver of
+          this revolution. As India pushes for faster EV adoption, advancements
+          in battery technology will determine affordability, efficiency, and
+          sustainability. However, challenges like high costs, raw material
+          scarcity, and recycling concerns persist. In this article, we explore
+          <b
+            >the latest innovations in EV batteries and the sustainability
+            challenges India faces in scaling up its EV ecosystem.</b
+          >
+        </p>
+
+        <!-- unique box section start -->
+        <!-- <section class="unique-section">
+          <h3 style="font-weight: bold">Unique Feature</h3>
+
+          <div class="unique-container">
+            <button class="slider-btn prev">&#10094;</button>
+            <div class="card-hide">
+              <div class="unique-box">
+                <div class="card"><h6>MG Dashboard Screen</h6></div>
+                <div class="card"><h6>Card 2</h6></div>
+                <div class="card"><h6>Card 3</h6></div>
+                <div class="card"><h6>Card 4</h6></div>
+                <div class="card"><h6>Card 5</h6></div>
+              </div>
+            </div>
+            <button class="slider-btn next">&#10095;</button>
+          </div>
+        </section> -->
+        <!-- unique box section end -->
+
+        <!-- <h4 style="color: #ff0000; font-weight: bold; margin-top: 16px">
+          What is FAME II?
+        </h4> -->
+
+        <!-- Latest Innovations in EV Batteries -->
+        <h4 style="font-weight: bold; margin-bottom: 16px">
+          Latest Innovations in EV Batteries
+        </h4>
+
+        <h5>1. Solid-State Batteries (SSB): The Next Big Leap</h5>
+        <ul>
+          <li>
+            <p>
+              Solid-state batteries replace liquid electrolytes with solid
+              materials, making them safer and more energy-dense.
+            </p>
+          </li>
+          <li>
+            <p>
+              Global players like Toyota, Samsung SDI, and QuantumScape are
+              leading research in this area.
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>India’s Scope:</b> Indian startups and institutions, like
+              IIT-Madras, are working on indigenous solid-state battery tech,
+              which could improve EV range and charging speed significantly.
+            </p>
+          </li>
+        </ul>
+
+        <h5>
+          2. Lithium-Iron-Phosphate (LFP) Batteries: Cost-Effective and Durable
+        </h5>
+        <ul>
+          <li>
+            <p>
+              LFP batteries, used in Tata Nexon EV and Ola S1 Pro, offer better
+              life cycles and thermal stability.
+            </p>
+          </li>
+          <li>
+            <p>
+              Unlike traditional lithium-ion batteries, they do not require
+              expensive cobalt and nickel, making them cost-effective.
+            </p>
+          </li>
+        </ul>
+
+        <h5>3. Sodium-Ion Batteries: The Alternative to Lithium</h5>
+        <ul>
+          <li>
+            <p>
+              Sodium-ion batteries, developed by CATL and Faradion, are gaining
+              traction due to the abundant availability of sodium.
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>India’s Role:</b>
+              Reliance New Energy Solar has acquired Faradion, indicating
+              India's potential to lead in sodium-ion battery production.
+            </p>
+          </li>
+        </ul>
+
+        <h5>4. Silicon and Graphene Anodes: Enhancing Energy Density</h5>
+        <ul>
+          <li>
+            <p>
+              Silicon-based anodes can store more energy than conventional
+              graphite, increasing battery efficiency.
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>Indian Startups like Log9 Materials</b>
+              are exploring graphene-based innovations to enhance charging speed
+              and battery life.
+            </p>
+          </li>
+        </ul>
+
+        <h5>5. Battery Swapping and Ultra-Fast Charging Technologies</h5>
+        <ul>
+          <li>
+            <p>
+              Companies like <b>Sun Mobility</b> and <b>Gogoro</b>
+              are pioneering battery-swapping stations in India.
+            </p>
+          </li>
+          <li>
+            <p>
+              Ola Electric and Tata Power are expanding ultra-fast charging
+              networks to reduce charging time and improve user convenience.
+            </p>
+          </li>
+        </ul>
+
+        <!-- Sustainability Challenges in Battery Adoption -->
+        <h4 style="font-weight: bold">
+          Sustainability Challenges in Battery Adoption
+        </h4>
+        <h4>
+          Despite rapid advancements, the Indian EV battery industry faces
+          multiple hurdles:
+        </h4>
+
+        <h5>1. Dependence on Imported Lithium</h5>
+        <ul>
+          <li>
+            <p>
+              India currently imports over <b>70% of its lithium</b> from China
+              and South America.
+            </p>
+          </li>
+          <li>
+            <p>
+              Recent lithium discoveries in
+              <b>Jammu & Kashmir (5.9 million tonnes)</b> could reduce
+              dependency but require time for commercial extraction.
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>India’s Scope:</b> Indian startups and institutions, like
+              IIT-Madras, are working on indigenous solid-state battery tech,
+              which could improve EV range and charging speed significantly.
+            </p>
+          </li>
+        </ul>
+
+        <!-- ads-section -->
+        <div class="d-flex justify-content-center align-item-center">
+          <div class="long-ad-box" style="padding: 24px 0; max-width: 700px">
+            <img src="Images/ad-image.jpg" width="100%" alt="" />
+          </div>
+        </div>
+
+        <h5>2. Battery Recycling and E-Waste Management</h5>
+        <ul>
+          <li>
+            <p>
+              India currently imports over <b>70% of its lithium</b> from China
+              and South America.
+            </p>
+          </li>
+          <li>
+            <p>
+              The lack of a robust battery recycling infrastructure poses
+              environmental risks.
+            </p>
+          </li>
+          <li>
+            <p>
+              Companies like <b>Attero Recycling</b> and <b>LOHUM</b> are
+              working on battery reuse and raw material recovery.
+            </p>
+          </li>
+        </ul>
+
+        <h5>3. High Costs and Affordability Issues</h5>
+        <ul>
+          <li>
+            <p>
+              EV battery packs constitute <b>40-50% of a vehicle’s cost.</b>
+            </p>
+          </li>
+          <li>
+            <p>
+              The government’s
+              <b
+                >PLI scheme for Advanced Chemistry Cell (ACC) manufacturing
+                (₹18,100 crore)</b
+              >
+              aims to reduce costs and boost local production.
+            </p>
+          </li>
+        </ul>
+
+        <h5>4. Lack of Charging Infrastructure</h5>
+        <ul>
+          <li>
+            <p>
+              India currently has
+              <b>less than 10,000 public charging stations,</b> compared to
+              <b>over 1 million in China.</b>
+            </p>
+          </li>
+          <li>
+            <p>
+              Private sector participation and renewable energy-based charging
+              solutions are essential for scalability.
+            </p>
+          </li>
+        </ul>
+
+        <!-- mobile ads section (check on road price section) -->
+        <div class="d-flex justify-content-center align-item-center">
+          <div class="mob-ads-box1">
+            <img src="Images/harrier_banner_300x250.jpg" width="100%" alt="" />
+          </div>
+        </div>
+
+        <h5>5. Thermal Management in Hot Climates</h5>
+        <ul>
+          <li>
+            <p>India’s extreme heat affects battery efficiency and lifespan.</p>
+          </li>
+          <li>
+            <p>
+              <b>Indigenous R&D</b> is crucial to develop heat-resistant and
+              long-lasting battery technologies.
+            </p>
+          </li>
+        </ul>
+
+        <h4 style="font-weight: bold">
+          The Road Ahead: India’s Role in the Global Battery Market
+        </h4>
+        <ul>
+          <li>
+            <p>
+              <b>Local Gigafactories:</b> Companies like
+              <b>Reliance, Ola, and Tata Chemicals</b> are setting up
+              gigafactories for battery cell manufacturing.
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>Government Incentives:</b> The <b> FAME II</b> and
+              <b>Battery Waste Management Rules 2022</b> encourage battery
+              standardization and eco-friendly disposal.
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>EV Penetration Goals: </b> India aims for
+              <b>30% EV adoption by 2030,</b> requiring massive investments in
+              R&D, infrastructure, and battery innovation.
+            </p>
+          </li>
+        </ul>
+
+        <!-- Conclusion -->
+        <h4 style="color: #ff0000; font-weight: bold; margin-bottom: 16px">
+          Conclusion
+        </h4>
+        <p>
+          India's EV future hinges on robust battery technology. While global
+          innovations in solid-state, sodium-ion, and graphene-based batteries
+          are shaping the industry, India must
+          <b
+            >scale domestic manufacturing, improve recycling, and invest in
+            R&D.</b
+          >
+          With the right policies and private-sector collaboration, India can
+          emerge as a global leader in EV battery technology, ensuring
+          <b>sustainable and affordable EV adoption.</b>
+        </p>
+        <p>The future is electrifying—<b>Will India lead the charge? </b></p>
+      </div>
+
+      <div class="article-ads-container">
+        <!-- ads section -->
+        <div class="ads-box1">
+          <img src="Images/harrier_banner_300x250.jpg" width="100%" alt="" />
+        </div>
+
+        <!-- expert opinion section -->
+        <div class="expert-opinion-box">
+          <div class="expert-cards">
+            <div class="car-image" style="position: relative">
+              <img src="Images/expert-opinion1.png" width="100%" alt="" />
+            </div>
+            <div class="car-details" style="padding: 16px">
+              <h6 style="margin: 0">
+                Need an expert opinion on your car and bike related queries?
+              </h6>
+              <div class="form-group text-center py-3">
+                <a href="expert-opinion.html">
+                  <button
+                    type="submit"
+                    class="btn"
+                    style="
+                      width: 240px;
+                      border: 2px solid #484848;
+                      font-weight: bold;
+                    "
+                  >
+                    Ask Now
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- upcoming car section -->
+        <!-- <div class="upcoming-car-box">
+          <h5 style="font-weight: bold">Featured Cars:</h5>
+          <div class="car-cards">
+            <div class="car-image" style="position: relative">
+              <img src="Images/tesla.jpg" width="100%" alt="" />
+              <span class="view-box">45k+ Views</span>
+            </div>
+            <div class="car-details" style="padding: 16px">
+              <h5 style="margin: 0">Tesla Now in India</h5>
+              <p style="margin: 8px 0; color: #484848; font-size: 12px">
+                Hyundai India has launched the electric version of the Creta,
+                called the Creta electric, at Auto Expo 2025.
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- check on road price section -->
+        <!-- <div class="price-section">
+          <h5 style="font-weight: bold">Check Vehicle Price in your Cities:</h5>
+          <form>
+            <div class="form-group py-2">
+              <label for="formGroupExampleInput">Pincode:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pincode"
+                placeholder="Pincode"
+              />
+            </div>
+
+            <div class="form-group py-2">
+              <label for="variant">Select Variant:</label>
+              <select id="variant" class="form-control">
+                <option selected>Select variant</option>
+                <option>awd</option>
+                <option>ad</option>
+                <option>ad</option>
+              </select>
+            </div>
+            <div class="form-group text-center py-3">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="width: 240px"
+              >
+                Check Now
+              </button>
+            </div>
+          </form>
+        </div> -->
+
+        <!-- ads section -->
+        <div class="ads-box1 my-3">
+          <img src="Images/car-insurance.jpg" width="100%" alt="" />
+        </div>
+
+        <!-- popular article section -->
+        <div class="article-section">
+          <h5 style="font-weight: bold">Popular Articles:</h5>
+          <div class="article-box">
+            <!-- 1 -->
+            <a href="Tata-nexon.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img src="Images/tata-nexon-3.jpg" height="100%" alt="" />
+                  <span class="article-view-box">45k+ Views</span>
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    Tata Nexon
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    The Tata Nexon is one of India's most popular compact SUVs,
+                    known for its bold design etc...
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 2 -->
+            <a href="Maruti-Suzuki-Grand-Vitara.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img
+                    src="Images/maruti-suzuki-grand-vitara-2.jpg"
+                    height="100%"
+                    alt=""
+                  />
+                  <span class="article-view-box">45k+ Views</span>
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    Maruti Suzuki Grand Vitara
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    The Maruti Suzuki Grand Vitara is a game-changer in the
+                    mid-size SUV segment, etc...
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 3 -->
+            <a href="Mercedes-Benz-G-Class.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img
+                    src="Images/mercedes-benz-g-class-1.jpg"
+                    height="100%"
+                    alt=""
+                  />
+                  <span class="article-view-box">45k+ Views</span>
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    Mercedes-Benz G-Class
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    The Mercedes-Benz G-Class, also known as the G-Wagon, is an
+                    iconic SUV etc...
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 4 -->
+            <a href="Tata-Punch.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img src="Images/tata-punch-1.jpg" width="100%" alt="" />
+                  <span class="article-view-box">45k+ Views</span>
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    Tata Punch
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    The Tata Punch has revolutionized the compact SUV segment in
+                    India, offering a perfect mix of affordability etc...
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- ads-container -->
+        <div
+          class="ads-box2 my-3"
+          style="
+            width: 300px;
+            height: auto;
+            overflow: hidden;
+            border-radius: 4px;
+          "
+        >
+          <img src="Images/ad-image-2.jpg" width="100%" alt="" />
+        </div>
+        <!-- compare car section -->
+        <!-- <div class="compare-car-box">
+          <h5 style="font-weight: bold">Compare with other Cars:</h5>
+          <div class="compare-car-cards">
+            <div
+              class="car-image"
+              style="position: relative; border-radius: 4px; overflow: hidden"
+            >
+              <img src="Images/tesla.jpg" width="100%" alt="" />
+              <span
+                class="price-text-box"
+                style="background-color: #fff; font-size: 10px"
+                >Show price in my city</span
+              >
+            </div>
+            <div class="car-details" style="padding: 16px 4px">
+              <p class="m-0" style="font-size: 14px">Mahindra Thar Roxx</p>
+              <h5 class="" style="margin: -4px 0; font-weight: bold">
+                Rs. 12- 27.99 Lakh
+              </h5>
+              <span style="color: #969696; font-size: 12px">
+                Avg. Ex-showroom price</span
+              >
+            </div>
+            <div class="compare-btn">
+              <a href="" style="text-decoration: none" class="">
+                Compare
+                <i
+                  class="fa-solid fa-circle-arrow-right"
+                  style="font-size: 32px"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- popular article section -->
+        <div class="article-section">
+          <h5 style="font-weight: bold">Popular Articles:</h5>
+          <div class="article-box">
+            <!-- 1 -->
+            <a href="EV-Adoption.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img src="Images/EV-3-1.jpg" width="100%" alt="" />
+                  <!-- <span class="article-view-box">45k+ Views</span> -->
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    India is Pushing EV Adoption
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    India is the Faster Adoption and Manufacturing of Hybrid and
+                    Electric Vehicles (FAME) scheme.
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 2 -->
+            <a href="Battery-Recycling.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img
+                    src="Images/Battery-Recycling-4.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <!-- <span class="article-view-box">45k+ Views</span> -->
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    The EV Battery Recycling Problem
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    As India accelerates its transition to electric vehicles
+                    (EVs), a major challenge looms—battery
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 3 -->
+            <a href="Hydrogen-Electric.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img
+                    src="Images/Hydrogen-Electric-2.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <!-- <span class="article-view-box">45k+ Views</span> -->
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    Hydrogen vs Electric
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    India is at a crucial juncture in its transition to
+                    sustainable transportation.
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 4 -->
+            <a href="EV-Batteries.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img src="Images/EV-Batteries-2.jpg" width="100%" alt="" />
+                  <!-- <span class="article-view-box">45k+ Views</span> -->
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    The Future of EV Batteries
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    Electric Vehicles (EVs) are at the forefront of the global
+                    transition to clean mobility
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- ads-container -->
+        <div
+          class="ads-box2 my-3"
+          style="
+            width: 300px;
+            height: auto;
+            overflow: hidden;
+            border-radius: 4px;
+          "
+        >
+          <img src="Images/ad-image-2.jpg" width="100%" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Aticle Section End -->
+
+    <!-- ads section -->
+    <div class="p-3 my-3 text-center container-md">
+      <img src="Images/ad-image-3.jpg" width="100%" alt="" />
+    </div>
+
+    <!-- footer section start -->
+    <footer class="container-fuild mt-5">
+      <!-- getintouch section -->
+      <div class="container-fuild" style="background-color: #292929">
+        <div class="getintouch-box container-md">
+          <p class="getintouch-text m-0">
+            Questions? Get in Touch! <br />Give us a missed call to get a call
+            back
+          </p>
+          <div class="getintouch-info">
+            <p class="m-0">
+              <i class="fa-solid fa-mobile"></i>&nbsp; +91-22-48913909
+            </p>
+            <p class="m-0">
+              <i class="fa-solid fa-envelope"></i>&nbsp;
+              support@VroomCentral.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- web footer section -->
+      <div class="container-md web-footer-container">
+        <div class="web-footer-section d-flex justify-content-around">
+          <!-- About Us box -->
+          <div class="sub-link-box">
+            <h6>About Us</h6>
+
+            <p style="width: 300px; font-size: 12px; color: #cacaca">
+              <span style="font-weight: 600">VroomCentral</span> is a web portal
+              covering all the latest happenings in the Indian automobile
+              industry. We are obsessed with cars and bikes and review the
+              latest Indian cars and Indian bikes. Stay tuned to us and you will
+              never miss a single news on your favourite car or bike.
+            </p>
+          </div>
+
+          <!-- Top Articles -->
+          <div class="sub-link-box">
+            <h6>Top Articles</h6>
+
+            <ul class="link-list">
+              <li><a href="Tata-Punch.html">Tata Punch</a></li>
+              <li><a href="Tata-nexon.html">Tata Nexon</a></li>
+              <li><a href="Mercedes-Benz-G-Class.html">Mercedes G-Class</a></li>
+              <li>
+                <a href="Maruti-Suzuki-Grand-Vitara.html"
+                  >Maruti Grand Vitara</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Connect With Us box -->
+          <div class="sub-link-box">
+            <h6>Connect With Us</h6>
+
+            <ul class="link-list">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="contact.html">Advertise With Us</a></li>
+            </ul>
+          </div>
+          <!-- follow us -->
+          <div class="sub-link-box">
+            <div class="">
+              <h6>Follow Us</h6>
+
+              <ul class="link-list">
+                <a href=""><i class="fa-brands fa-facebook"></i></a
+                >&nbsp; &nbsp;
+                <a href=""><i class="fa-brands fa-instagram"></i></a
+                >&nbsp; &nbsp;
+                <a href=""><i class="fa-brands fa-youtube"></i></a
+                >&nbsp; &nbsp;
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a
+                >&nbsp; &nbsp;
+              </ul>
+            </div>
+            <!-- <div class="">
+                    <h6>Sign up for our Newsletter</h6>
+    
+                    <div class="input-group mb-3">
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="vc@gmail.com"
+                        style="width: 100px"
+                    />
+                    <button class="input-group-text">SUBMIT</button>
+                    </div>
+                </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- mob footer section -->
+      <div class="container-md mob-footer-container">
+        <div class="mob-footer-section">
+          <!-- contact box -->
+          <div class="sub-link-box">
+            <div
+              class="link-box-heading contact-us"
+              data-bs-toggle="collapse"
+              href="#contact-us"
+              role="button"
+              aria-expanded="false"
+              aria-controls="overview"
+            >
+              <h6>Contact Us</h6>
+              <i class="fa-solid fa-caret-down my-2"></i>
+            </div>
+            <div
+              class="getintouch-info collapse multi-collapse"
+              id="contact-us"
+            >
+              <p class="m-0">
+                <i class="fa-solid fa-mobile"></i>&nbsp; +91-22-48913909
+              </p>
+              <p class="m-0">
+                <i class="fa-solid fa-envelope"></i>&nbsp;
+                support@VroomCentral.com
+              </p>
+            </div>
+          </div>
+          <!-- about us box -->
+          <div class="sub-link-box">
+            <div
+              class="link-box-heading overview"
+              data-bs-toggle="collapse"
+              href="#about-us"
+              role="button"
+              aria-expanded="false"
+              aria-controls="overview"
+            >
+              <h6>About Us</h6>
+              <i class="fa-solid fa-caret-down my-2"></i>
+            </div>
+            <p
+              id="about-us"
+              class="collapse multi-collapse"
+              style="width: 300px; font-size: 12px; color: #cacaca"
+            >
+              <span style="font-weight: 600">VroomCentral</span> is a web portal
+              covering all the latest happenings in the Indian automobile
+              industry. We are obsessed with cars and bikes and review the
+              latest Indian cars and Indian bikes. Stay tuned to us and you will
+              never miss a single news on your favourite car or bike.
+            </p>
+          </div>
+          <!-- Top Articles box -->
+          <div class="sub-link-box">
+            <div
+              class="link-box-heading others"
+              data-bs-toggle="collapse"
+              href="#top-articles"
+              role="button"
+              aria-expanded="false"
+              aria-controls="top-articles"
+            >
+              <h6>Top Articles</h6>
+              <i class="fa-solid fa-caret-down my-2"></i>
+            </div>
+
+            <ul id="top-articles" class="link-list collapse multi-collapse">
+              <li><a href="Tata-Punch.html">Tata Punch</a></li>
+              <li><a href="Tata-nexon.html">Tata Nexon</a></li>
+              <li><a href="Mercedes-Benz-G-Class.html">Mercedes G-Class</a></li>
+              <li>
+                <a href="Maruti-Suzuki-Grand-Vitara.html"
+                  >Maruti Grand Vitara</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Connect With Us box -->
+          <div class="sub-link-box">
+            <div
+              class="link-box-heading connect-with-us"
+              data-bs-toggle="collapse"
+              href="#connect-with-us"
+              role="button"
+              aria-expanded="false"
+              aria-controls="connect-with-us"
+            >
+              <h6>Connect With Us</h6>
+              <i class="fa-solid fa-caret-down my-2"></i>
+            </div>
+            <ul class="link-list collapse multi-collapse" id="connect-with-us">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="contact.html">Advertise With Us</a></li>
+            </ul>
+          </div>
+          <!-- follow us -->
+          <div class="sub-link-box">
+            <div
+              class="link-box-heading follow-us"
+              data-bs-toggle="collapse"
+              href="#follow-us"
+              role="button"
+              aria-expanded="false"
+              aria-controls="follow-us"
+            >
+              <h6>follow us</h6>
+              <i class="fa-solid fa-caret-down my-2"></i>
+            </div>
+            <div id="follow-us" class="collapse multi-collapse">
+              <div class="">
+                <ul class="link-list">
+                  <a href=""><i class="fa-brands fa-facebook"></i></a
+                  >&nbsp; &nbsp;
+                  <a href=""><i class="fa-brands fa-instagram"></i></a
+                  >&nbsp; &nbsp;
+                  <a href=""><i class="fa-brands fa-youtube"></i></a
+                  >&nbsp; &nbsp;
+                  <a href=""><i class="fa-brands fa-x-twitter"></i></a
+                  >&nbsp; &nbsp;
+                </ul>
+              </div>
+              <!-- <div class="">
+                    <h6>Sign up for our Newsletter</h6>
+    
+                    <div class="input-group mb-3" style="width: 200px">
+                        <input
+                        type="text"
+                        class="form-control"
+                        placeholder="vc@gmail.com"
+                        style="width: 100px"
+                        />
+                        <button class="input-group-text">SUBMIT</button>
+                    </div>
+                    </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- copyright section  -->
+      <div class="container-fuild" style="background-color: #292929">
+        <div class="copyright-box container-md">
+          <p class="copyright-text m-0 py-1">Copyright © 2019-2025 Adzcom.ai</p>
+          <div class="copyright-info">
+            <p class="m-0">
+              <a href="Terms_and_Conditions.html">Privacy Policy</a>
+            </p>
+            <p class="m-0">
+              <a href="Terms_and_Conditions.html">Terms& Conditions</a>
+            </p>
+            <p class="m-0">
+              <a href="Terms_and_Conditions.html">Disclamiers</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section end -->
+  </body>
+  <script src="script.js"></script>
+</html>

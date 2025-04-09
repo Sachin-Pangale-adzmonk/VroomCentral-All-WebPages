@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vroom Central</title>
+
+    <link
+      rel="shortcut icon"
+      href="Images/favicon_Icon.png"
+      type="image/x-icon"
+    />
+
+    <!-- awesome font link -->
+    <link rel="stylesheet" href="AwesomeFont-links/all.min.css" />
+    <script src="AwesomeFont-links/all.min.js"></script>
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+      crossorigin=""
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="Slider-links/css/swiper-bundle.min.css" />
+
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Swiper.js CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar section start -->
+    <nav
+      style="background-color: #f8eded"
+      class="navbar navbar-expand-lg navbar-light"
+    >
+      <div class="container-md">
+        <!-- Logo -->
+        <a class="navbar-brand" href="Home.html"
+          ><div class="logo">
+            <img
+              src="Images/Vroom-Central-Logo.png"
+              width="100%"
+              alt="logo"
+            /></div
+        ></a>
+
+        <!-- Toggle button for mobile view -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="font-weight: 450" href="blog.html"
+                >Featured Article</a
+              >
+            </li>
+            &nbsp;
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                style="font-weight: 450"
+                href="newsarticle.html"
+                >Latest News</a
+              >
+            </li>
+            &nbsp;
+            <li class="nav-item">
+              <a class="nav-link" style="font-weight: 450" href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Buttons to open modals -->
+          <div class="d-flex" style="gap: 8px">
+            <button
+              class="btn btn-primary btn-custom"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+              onclick="document.getElementById('id01').style.display='block'"
+              style="width: auto"
+            >
+              Login/ Register
+            </button>
+          </div>
+
+          <div class="profile-container">
+            <div class="profile-photo">
+              <img src="Images/profile-pic.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar section end -->
+
+    <!-- login popup start -->
+    <div id="id01" class="modal">
+      <div class="modal-content animate">
+        <div class="pop-img-container">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="pop-close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <h4>LogIn/SignUp</h4>
+        </div>
+
+        <div class="pop-container">
+          <form action="" class="text-center">
+            <div class="basic-input-box">
+              <input
+                type="email"
+                id="emails"
+                name="email"
+                placeholder="vc@gmail.com "
+                required
+              />
+              <label class="basic-input-box-title" for="email"
+                >Email Id<sup>*</sup> :</label
+              ><br />
+              <span class="error" id="EmailError">Email Id is required</span>
+            </div>
+
+            <div class="basic-input-box">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+              <label class="basic-input-box-title" for="password"
+                >Password<sup>*</sup> :</label
+              ><br />
+              <span class="error" id="PasswordError">Password is required</span>
+            </div>
+
+            <!-- <p class="text-center m-0">Or</p> -->
+
+            <!-- <div class="basic-input-box form-group form-check">
+              <button class="google-btn">
+                <img
+                  src="Images/google_logo.png"
+                  alt=""
+                  width="20px"
+                  height="20px"
+                />
+                <p class="m-0 google-text">Continue With Google</p>
+              </button>
+            </div> -->
+
+            <div class="basic-input-box form-group form-check">
+              <label
+                class="form-check-label"
+                for="exampleCheck1"
+                style="font-size: 12px"
+              >
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                  checked
+                />
+                I have read the
+                <a href="Terms_and_Conditions.html"
+                  >Terms & Conditions</a
+                ></label
+              >
+            </div>
+
+            <div class="basic-input-box btns-group text-center" id="get-otp">
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- login popup end -->
+
+    <!-- Aticle Section Start -->
+    <section
+      class="article-section container-fuild d-flex justify-content-center"
+    >
+      <div class="article-container p-3">
+        <!-- hero image section start -->
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <a href="Tata-Punch.html">
+              <div class="carousel-item carousel-color active">
+                <img
+                  src="Images/hero-banner-1.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div style="padding: 0" class="carousel-caption d-md-block">
+                  <h1 style="text-align: start; font-weight: bold">
+                    TATA Punch Starting <br>
+                    <span style="color: #ffcc00">from ₹6.65Lakh*</span>
+                  </h1>
+                </div>
+              </div>
+            </a>
+            <a href="Maruti-Suzuki-Grand-Vitara.html">
+              <div class="carousel-item carousel-color">
+                <img
+                  src="Images/hero-banner-2.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div style="padding: 0" class="carousel-caption d-md-block">
+                  <h1 style="text-align: start; font-weight: bold">
+                    Maruti Suzuki Grand Vitara <br>
+                    <span style="padding: 0; color: #ffcc00; text-align: start"
+                      >Premium Hybrid SUV for India</span
+                    >
+                  </h1>
+                </div>
+              </div>
+            </a>
+            <a href="Kia-Carnival.html">
+              <div class="carousel-item carousel-color">
+                <img
+                  src="Images/hero-banner-3.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div style="padding: 0" class="carousel-caption d-md-block">
+                  <h1 style="text-align: start; font-weight: bold">
+                    The Kia Carnival is a  
+                    <span style="color: #ffcc00;">premium multi-purpose vehicle</span>
+                  </h1>
+                </div>
+              </div>
+            </a>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- hero image section end -->
+
+        <!-- latest news section start -->
+        <!-- <section class="unique-section" style="padding: 24px">
+          <h4 style="font-weight: 600; margin: 0">
+            Latest News
+          </h4>
+
+          <div class="news-container">
+            <button class="slider-btn news-prev">&#10094;</button>
+            <div class="news-card-hide">
+              <div class="news-box">
+                Automatic Climate Control
+                <div class="unique-card">
+                  <div class="image">
+                    <img
+                      src="Images/tata-punch-climate-contol.jpg"
+                      width="100%"
+                      alt=""
+                    />
+                  </div>
+                  <h6>Automatic Climate Control</h6>
+                </div>
+                Digital instrument cluster
+                <div class="unique-card">
+                  <div class="image">
+                    <img
+                      src="Images/tata-punch-Digital-meter.jpg"
+                      width="100%"
+                      alt=""
+                    />
+                  </div>
+                  <h6>Digital instrument cluster</h6>
+                </div>
+                Larger 10.25-inch touchscreen
+                <div class="unique-card">
+                  <div class="image">
+                    <img
+                      src="Images/tata-punch-Larger-display.jpg"
+                      width="100%"
+                      alt=""
+                    />
+                  </div>
+                  <h6>Larger 10.25-inch touchscreen</h6>
+                </div>
+                6-speaker Harman sound system
+                <div class="unique-card">
+                  <div class="image">
+                    <img
+                      src="Images/tata-punch-sounds.jpg"
+                      width="100%"
+                      alt=""
+                    />
+                  </div>
+                  <h6>6-speaker Harman sound system</h6>
+                </div>
+                Sunroof
+                <div class="unique-card">
+                  <div class="image">
+                    <img
+                      src="Images/tata-punch-sunroof.jpg"
+                      width="100%"
+                      alt=""
+                    />
+                  </div>
+                  <h6>Sunroof</h6>
+                </div>
+              </div>
+            </div>
+            <button class="slider-btn news-next">&#10095;</button>
+          </div>
+        </section> -->
+        <!-- latest news section end -->
+
+        <!-- news section start -->
+        <section class="text-center mt-5">
+          <h4 style="font-weight: bold; text-align: start; margin-bottom: 0">
+            News Articles
+          </h4>
+
+          <div class="content-container">
+            <!-- 1 -->
+            <a href="Battery-Recycling.html">
+              <div class="news-content-cards">
+                <div class="news-content-image" style="position: relative">
+                  <img
+                    src="Images/Battery-Recycling-2.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">
+                    India are Solving the EV Battery Recycling Problem
+                  </h5>
+                </div>
+              </div>
+            </a>
+            <!-- 2 -->
+            <a href="EV-Adoption.html">
+              <div class="news-content-cards">
+                <div class="news-content-image" style="position: relative">
+                  <img src="Images/EV-4.jpg" width="100%" alt="" />
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">How India is Pushing EV Adoption</h5>
+                </div>
+              </div>
+            </a>
+            <!-- 3 -->
+            <a href="Hydrogen-Electric.html">
+              <div class="news-content-cards">
+                <div class="news-content-image" style="position: relative">
+                  <img
+                    src="Images/Hydrogen-Electric-2.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">
+                    What’s the Future of Clean Mobility in India?
+                  </h5>
+                </div>
+              </div>
+            </a>
+            <!-- 4 -->
+            <a href="EVs-Future.html">
+              <div class="news-content-cards">
+                <div class="news-content-image" style="position: relative">
+                  <img src="Images/EVs-Future-2.jpg" width="100%" alt="" />
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">The Future of EVs in India</h5>
+                </div>
+              </div>
+            </a>
+            <!-- 5 -->
+            <a href="EV-Batteries.html">
+              <div class="news-content-cards">
+                <div class="news-content-image" style="position: relative">
+                  <img src="Images/EV-Batteries-2.jpg" width="100%" alt="" />
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">The Future of EV Batteries</h5>
+                </div>
+              </div>
+            </a>
+
+            <!-- 6 -->
+            <a href="Electric-Two-Wheelers.html">
+              <div class="news-content-cards">
+                <div class="news-content-image" style="position: relative">
+                  <img
+                    src="Images/Electric-Two-Wheelers-1.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">Electric Scooters Vs Bikes</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+          <a href="newsarticle.html" class="content-btn">View All</a>
+        </section>
+        <!-- news section end -->
+
+        <!-- ads-section -->
+        <div class="d-flex justify-content-center mt-4">
+          <div class="long-ad-box" style="padding: 24px 0; max-width: 700px">
+            <img src="Images/ad-image.jpg" width="100%" alt="" />
+          </div>
+        </div>
+        <!-- mobile ads section -->
+        <!-- <div class="mob-ads-box1">
+          <img src="Images/harrier_banner_300x250.jpg" width="100%" alt="" />
+        </div> -->
+        <!-- article section start -->
+        <section class="text-center mt-2">
+          <h4 style="font-weight: bold; text-align: start; margin-bottom: 0">
+            Featured Vehicle
+          </h4>
+          <div class="article-h-box">
+            <button id="all" class="article-h-text active">All</button>
+            <button id="cars" class="article-h-text">Cars</button>
+            <button id="bike" class="article-h-text">Bike</button>
+            <button id="othersq" class="article-h-text">Others</button>
+          </div>
+
+          <div class="content-container">
+            <!-- 1 -->
+            <a href="Tata-Punch.html">
+              <div id="cars" class="content-cards" data-category="cars">
+                <div class="content-image" style="position: relative">
+                  <img src="Images/tata-punch-1.jpg" width="100%" alt="" />
+                  <span class="view-box">105k+ Views</span>
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">Tata Punch</h5>
+                  <p style="margin: 0; color: #484848; font-size: 12px">
+                    The Best Compact SUV for Indian Roads?
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 2 -->
+            <a href="Mercedes-Benz-G-Class.html">
+              <div id="cars" class="content-cards" data-category="cars">
+                <div class="content-image" style="position: relative">
+                  <img
+                    src="Images/mercedes-benz-g-class-1.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <span class="view-box">25k+ Views</span>
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">Mercedes-Benz G-Class</h5>
+                  <p style="margin: 0; color: #484848; font-size: 12px">
+                    The Ultimate Luxury Off-Roader
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            <!-- mobile ads section -->
+            <div class="d-flex justify-content-center align-item-center">
+              <div class="mob-ads-box1">
+                <img src="Images/car-insurance.jpg" width="100%" alt="" />
+              </div>
+            </div>
+            <!-- 3 -->
+            <a href="Maruti-Suzuki-Alto-K10.html">
+              <div id="cars" class="content-cards" data-category="cars">
+                <div class="content-image" style="position: relative">
+                  <img
+                    src="Images/maruti-suzuki-alto-k10-1.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <span class="view-box">895k+ Views</span>
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">Maruti Suzuki Alto K10</h5>
+                  <p style="margin: 0; color: #484848; font-size: 12px">
+                    Affordable Compact Hatchback for Every Journey.
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 4 -->
+            <a href="Tata-nexon.html">
+              <div id="cars" class="content-cards" data-category="cars">
+                <div class="content-image" style="position: relative">
+                  <img src="Images/tata-nexon-3.jpg" width="100%" alt="" />
+                  <span class="view-box">421k+ Views</span>
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">Tata Nexon</h5>
+                  <p style="margin: 0; color: #484848; font-size: 12px">
+                    The Ultimate Compact SUV in India
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 5 -->
+            <a href="Maruti-Suzuki-Grand-Vitara.html">
+              <div id="cars" class="content-cards" data-category="cars">
+                <div class="content-image" style="position: relative">
+                  <img
+                    src="Images/maruti-suzuki-grand-vitara-1.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <span class="view-box">380k+ Views</span>
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">Maruti Suzuki Grand Vitara</h5>
+                  <p style="margin: 0; color: #484848; font-size: 12px">
+                    A Premium Hybrid SUV for India
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 6 -->
+            <a href="Kia-Carnival.html">
+              <div id="bike" class="content-cards" data-category="bike">
+                <div class="content-image" style="position: relative">
+                  <img src="Images/kia-carnival-1.jpg" width="100%" alt="" />
+                  <span class="view-box">115k+ Views</span>
+                </div>
+                <div class="car-details" style="padding: 16px">
+                  <h5 style="margin: 0">Kia Carnival</h5>
+                  <p style="margin: 0; color: #484848; font-size: 12px">
+                    The Ultimate Luxury MPV for Families and Businesses
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <a href="blog.html" class="content-btn">View All</a>
+        </section>
+        <!-- article section end -->
+      </div>
+
+      <div class="article-ads-container">
+        <!-- ads section -->
+        <div class="ads-box1">
+          <img src="Images/harrier_banner_300x250.jpg" width="100%" alt="" />
+        </div>
+        <!-- expert opinion section -->
+        <div class="expert-opinion-box">
+          <div class="expert-cards">
+            <div class="car-image" style="position: relative">
+              <img src="Images/expert-opinion1.png" width="100%" alt="" />
+            </div>
+            <div class="car-details" style="padding: 16px">
+              <h6 style="margin: 0">
+                Need an expert opinion on your car and bike related queries?
+              </h6>
+              <div class="form-group text-center py-3">
+                <a href="expert-opinion.html"
+                  ><button
+                    type="submit"
+                    class="btn"
+                    style="
+                      width: 240px;
+                      border: 2px solid #484848;
+                      font-weight: bold;
+                    "
+                  >
+                    Ask Now
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- upcoming car section -->
+        <!-- <div class="upcoming-car-box">
+          <h5 style="font-weight: bold">Upcoming Cars:</h5>
+          <div class="car-cards">
+            <div class="car-image" style="position: relative">
+              <img src="Images/tesla.jpg" width="100%" alt="" />
+              <span class="view-box">45k+ Views</span>
+            </div>
+            <div class="car-details" style="padding: 16px">
+              <h5 style="margin: 0">Tesla Now in India</h5>
+              <p style="margin: 8px 0; color: #484848; font-size: 12px">
+                Hyundai India has launched the electric version of the Creta,
+                called the Creta electric, at Auto Expo 2025.
+              </p>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- check on road price section -->
+        <!-- <div class="price-section">
+          <h5 style="font-weight: bold">Check Vehicle Price in your Cities:</h5>
+          <form>
+            <div class="form-group py-2">
+              <label for="formGroupExampleInput">Pincode:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pincode"
+                placeholder="Pincode"
+              />
+            </div>
+
+            <div class="form-group py-2">
+              <label for="variant">Select Variant:</label>
+              <select id="variant" class="form-control">
+                <option selected>Select variant</option>
+                <option>awd</option>
+                <option>ad</option>
+                <option>ad</option>
+              </select>
+            </div>
+            <div class="form-group text-center py-3">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="width: 240px"
+              >
+                Check Now
+              </button>
+            </div>
+          </form>
+        </div> -->
+
+        <!-- ads section -->
+        <div class="ads-box1 my-3">
+          <img src="Images/car-insurance.jpg" width="100%" alt="" />
+        </div>
+
+        <!-- Featured Vehicle section -->
+        <div class="article-section mt-3">
+          <h5 style="font-weight: bold">Featured Vehicle:</h5>
+          <div class="article-box">
+            <!-- 1 -->
+            <a href="Tata-Punch.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img
+                    src="Images/tata-punch-1.jpg"
+                    height="100%"
+                    alt=""
+                  />
+                  <span class="article-view-box">105k+ Views</span>
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    tata Punch
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    The Best Compact SUV for Indian Roads?
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 2 -->
+            <a href="Maruti-Suzuki-Grand-Vitara.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img
+                    src="Images/maruti-suzuki-grand-vitara-2.jpg"
+                    height="100%"
+                    alt=""
+                  />
+                  <span class="article-view-box">380k+ Views</span>
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    Maruti Suzuki Grand Vitara
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    The Maruti Suzuki Grand Vitara is a game-changer in the
+                    mid-size SUV segment, etc...
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 3 -->
+            <a href="Mercedes-Benz-G-Class.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img
+                    src="Images/mercedes-benz-g-class-1.jpg"
+                    height="100%"
+                    alt=""
+                  />
+                  <span class="article-view-box">25k+ Views</span>
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    Mercedes-Benz G-Class
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    The Mercedes-Benz G-Class, also known as the G-Wagon, is an
+                    iconic SUV etc...
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 4 -->
+            <a href="Tata-nexon.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img src="Images/tata-nexon-1.jpg" width="100%" alt="" />
+                  <span class="article-view-box">421k+ Views</span>
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    Tata Nexon
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    The Ultimate Compact SUV in India
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- ads-container -->
+        <div
+          class="ads-box2 my-3"
+          style="
+            width: 300px;
+            height: auto;
+            overflow: hidden;
+            border-radius: 4px;
+          "
+        >
+          <img src="Images/ad-image-2.jpg" width="100%" alt="" />
+        </div>
+
+        <!-- popular article section -->
+        <div class="article-section">
+          <h5 style="font-weight: bold">Popular Articles:</h5>
+          <div class="article-box">
+            <!-- 1 -->
+            <a href="EV-Adoption.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img src="Images/EV-3-1.jpg" width="100%" alt="" />
+                  <!-- <span class="article-view-box">45k+ Views</span> -->
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    India is Pushing EV Adoption
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    India is the Faster Adoption and Manufacturing of Hybrid and
+                    Electric Vehicles (FAME) scheme.
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 2 -->
+            <a href="Battery-Recycling.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img
+                    src="Images/Battery-Recycling-4.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <!-- <span class="article-view-box">45k+ Views</span> -->
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    The EV Battery Recycling Problem
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    As India accelerates its transition to electric vehicles
+                    (EVs), a major challenge looms—battery
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 3 -->
+            <a href="Hydrogen-Electric.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img
+                    src="Images/Hydrogen-Electric-2.jpg"
+                    width="100%"
+                    alt=""
+                  />
+                  <!-- <span class="article-view-box">45k+ Views</span> -->
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    Hydrogen vs Electric
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    India is at a crucial juncture in its transition to
+                    sustainable transportation.
+                  </p>
+                </div>
+              </div>
+            </a>
+            <!-- 4 -->
+            <a href="EV-Batteries.html">
+              <div class="article-cards position-relative">
+                <div class="article-image" style="position: relative">
+                  <img src="Images/EV-Batteries-2.jpg" width="100%" alt="" />
+                  <!-- <span class="article-view-box">45k+ Views</span> -->
+                </div>
+                <div class="article-dtls">
+                  <h6 style="font-size: 14px; font-weight: bold; margin: 0">
+                    The Future of EV Batteries
+                  </h6>
+                  <p style="margin: 0; color: #484848; font-size: 10px">
+                    Electric Vehicles (EVs) are at the forefront of the global
+                    transition to clean mobility
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- compare car section -->
+        <!-- <div class="compare-car-box">
+          <h5 style="font-weight: bold">Compare with other Cars:</h5>
+          <div class="compare-car-cards">
+            <div
+              class="car-image"
+              style="position: relative; border-radius: 4px; overflow: hidden"
+            >
+              <img src="Images/tesla.jpg" width="100%" alt="" />
+              <span
+                class="price-text-box"
+                style="background-color: #fff; font-size: 10px"
+                >Show price in my city</span
+              >
+            </div>
+            <div class="car-details" style="padding: 16px 4px">
+              <p class="m-0" style="font-size: 14px">Mahindra Thar Roxx</p>
+              <h5 class="" style="margin: -4px 0; font-weight: bold">
+                Rs. 12- 27.99 Lakh
+              </h5>
+              <span style="color: #969696; font-size: 12px">
+                Avg. Ex-showroom price</span
+              >
+            </div>
+            <div class="compare-btn">
+              <a href="" style="text-decoration: none" class="">
+                Compare
+                <i
+                  class="fa-solid fa-circle-arrow-right"
+                  style="font-size: 32px"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- ads-container -->
+        <div
+          class="ads-box2 my-3"
+          style="
+            width: 300px;
+            height: auto;
+            overflow: hidden;
+            border-radius: 4px;
+          "
+        >
+          <img src="Images/ad-image-2.jpg" width="100%" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Aticle Section End -->
+
+    <!-- ads section -->
+    <div class="p-3 my-3 text-center container-md">
+      <img src="Images/ad-image-3.jpg" width="100%" alt="" />
+    </div>
+
+    <!-- footer section start -->
+    <footer class="container-fuild mt-5">
+      <!-- getintouch section -->
+      <div class="container-fuild" style="background-color: #292929">
+        <div class="getintouch-box container-md">
+          <p class="getintouch-text m-0">
+            Questions? Get in Touch! <br />Give us a missed call to get a call
+            back
+          </p>
+          <div class="getintouch-info">
+            <p class="m-0">
+              <i class="fa-solid fa-mobile"></i>&nbsp; +91-22-48913909
+            </p>
+            <p class="m-0">
+              <i class="fa-solid fa-envelope"></i>&nbsp;
+              support@VroomCentral.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- web footer section -->
+      <div class="container-md web-footer-container">
+        <div class="web-footer-section d-flex justify-content-around">
+          <!-- About Us box -->
+          <div class="sub-link-box">
+            <h6>About Us</h6>
+
+            <p style="width: 300px; font-size: 12px; color: #cacaca">
+              <span style="font-weight: 600">VroomCentral</span> is a web portal
+              covering all the latest happenings in the Indian automobile
+              industry. We are obsessed with cars and bikes and review the
+              latest Indian cars and Indian bikes. Stay tuned to us and you will
+              never miss a single news on your favourite car or bike.
+            </p>
+          </div>
+
+          <!-- Top Articles -->
+          <div class="sub-link-box">
+            <h6>Top Articles</h6>
+
+            <ul class="link-list">
+              <li><a href="Tata-Punch.html">Tata Punch</a></li>
+              <li><a href="Tata-nexon.html">Tata Nexon</a></li>
+              <li><a href="Mercedes-Benz-G-Class.html">Mercedes G-Class</a></li>
+              <li>
+                <a href="Maruti-Suzuki-Grand-Vitara.html"
+                  >Maruti Grand Vitara</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Connect With Us box -->
+          <div class="sub-link-box">
+            <h6>Connect With Us</h6>
+
+            <ul class="link-list">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="contact.html">Advertise With Us</a></li>
+            </ul>
+          </div>
+          <!-- follow us -->
+          <div class="sub-link-box">
+            <div class="">
+              <h6>Follow Us</h6>
+
+              <ul class="link-list">
+                <a href=""><i class="fa-brands fa-facebook"></i></a
+                >&nbsp; &nbsp;
+                <a href=""><i class="fa-brands fa-instagram"></i></a
+                >&nbsp; &nbsp;
+                <a href=""><i class="fa-brands fa-youtube"></i></a
+                >&nbsp; &nbsp;
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a
+                >&nbsp; &nbsp;
+              </ul>
+            </div>
+            <!-- <div class="">
+                    <h6>Sign up for our Newsletter</h6>
+    
+                    <div class="input-group mb-3">
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="vc@gmail.com"
+                        style="width: 100px"
+                    />
+                    <button class="input-group-text">SUBMIT</button>
+                    </div>
+                </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- mob footer section -->
+      <div class="container-md mob-footer-container">
+        <div class="mob-footer-section">
+          <!-- contact box -->
+          <div class="sub-link-box">
+            <div
+              class="link-box-heading contact-us"
+              data-bs-toggle="collapse"
+              href="#contact-us"
+              role="button"
+              aria-expanded="false"
+              aria-controls="overview"
+            >
+              <h6>Contact Us</h6>
+              <i class="fa-solid fa-caret-down my-2"></i>
+            </div>
+            <div
+              class="getintouch-info collapse multi-collapse"
+              id="contact-us"
+            >
+              <p class="m-0">
+                <i class="fa-solid fa-mobile"></i>&nbsp; +91-22-48913909
+              </p>
+              <p class="m-0">
+                <i class="fa-solid fa-envelope"></i>&nbsp;
+                support@VroomCentral.com
+              </p>
+            </div>
+          </div>
+          <!-- about us box -->
+          <div class="sub-link-box">
+            <div
+              class="link-box-heading overview"
+              data-bs-toggle="collapse"
+              href="#about-us"
+              role="button"
+              aria-expanded="false"
+              aria-controls="overview"
+            >
+              <h6>About Us</h6>
+              <i class="fa-solid fa-caret-down my-2"></i>
+            </div>
+            <p
+              id="about-us"
+              class="collapse multi-collapse"
+              style="width: 300px; font-size: 12px; color: #cacaca"
+            >
+              <span style="font-weight: 600">VroomCentral</span> is a web portal
+              covering all the latest happenings in the Indian automobile
+              industry. We are obsessed with cars and bikes and review the
+              latest Indian cars and Indian bikes. Stay tuned to us and you will
+              never miss a single news on your favourite car or bike.
+            </p>
+          </div>
+          <!-- Top Articles box -->
+          <div class="sub-link-box">
+            <div
+              class="link-box-heading others"
+              data-bs-toggle="collapse"
+              href="#top-articles"
+              role="button"
+              aria-expanded="false"
+              aria-controls="top-articles"
+            >
+              <h6>Top Articles</h6>
+              <i class="fa-solid fa-caret-down my-2"></i>
+            </div>
+
+            <ul id="top-articles" class="link-list collapse multi-collapse">
+              <li><a href="Tata-Punch.html">Tata Punch</a></li>
+              <li><a href="Tata-nexon.html">Tata Nexon</a></li>
+              <li><a href="Mercedes-Benz-G-Class.html">Mercedes G-Class</a></li>
+              <li>
+                <a href="Maruti-Suzuki-Grand-Vitara.html"
+                  >Maruti Grand Vitara</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Connect With Us box -->
+          <div class="sub-link-box">
+            <div
+              class="link-box-heading connect-with-us"
+              data-bs-toggle="collapse"
+              href="#connect-with-us"
+              role="button"
+              aria-expanded="false"
+              aria-controls="connect-with-us"
+            >
+              <h6>Connect With Us</h6>
+              <i class="fa-solid fa-caret-down my-2"></i>
+            </div>
+            <ul class="link-list collapse multi-collapse" id="connect-with-us">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="contact.html">Advertise With Us</a></li>
+            </ul>
+          </div>
+          <!-- follow us -->
+          <div class="sub-link-box">
+            <div
+              class="link-box-heading follow-us"
+              data-bs-toggle="collapse"
+              href="#follow-us"
+              role="button"
+              aria-expanded="false"
+              aria-controls="follow-us"
+            >
+              <h6>follow us</h6>
+              <i class="fa-solid fa-caret-down my-2"></i>
+            </div>
+            <div id="follow-us" class="collapse multi-collapse">
+              <div class="">
+                <ul class="link-list">
+                  <a href=""><i class="fa-brands fa-facebook"></i></a
+                  >&nbsp; &nbsp;
+                  <a href=""><i class="fa-brands fa-instagram"></i></a
+                  >&nbsp; &nbsp;
+                  <a href=""><i class="fa-brands fa-youtube"></i></a
+                  >&nbsp; &nbsp;
+                  <a href=""><i class="fa-brands fa-x-twitter"></i></a
+                  >&nbsp; &nbsp;
+                </ul>
+              </div>
+              <!-- <div class="">
+                    <h6>Sign up for our Newsletter</h6>
+    
+                    <div class="input-group mb-3" style="width: 200px">
+                        <input
+                        type="text"
+                        class="form-control"
+                        placeholder="vc@gmail.com"
+                        style="width: 100px"
+                        />
+                        <button class="input-group-text">SUBMIT</button>
+                    </div>
+                    </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- copyright section  -->
+      <div class="container-fuild" style="background-color: #292929">
+        <div class="copyright-box container-md">
+          <p class="copyright-text m-0 py-1">Copyright © 2019-2025 Adzcom.ai</p>
+          <div class="copyright-info">
+            <p class="m-0">
+              <a href="Terms_and_Conditions.html">Privacy Policy</a>
+            </p>
+            <p class="m-0">
+              <a href="Terms_and_Conditions.html">Terms& Conditions</a>
+            </p>
+            <p class="m-0">
+              <a href="Terms_and_Conditions.html">Disclamiers</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section end -->
+  </body>
+  <script src="script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".article-h-text");
+      const contentCards = document.querySelectorAll(".content-cards");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", function () {
+          // Remove active class from all buttons
+          buttons.forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+
+          const category = this.id.toLowerCase();
+
+          contentCards.forEach((card) => {
+            const cardCategory = card.getAttribute("data-category");
+
+            if (category === "all" || cardCategory === category) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  </script>
+</html>
