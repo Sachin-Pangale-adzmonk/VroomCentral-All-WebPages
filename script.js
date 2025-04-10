@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       profileContainer.style.display = "none";
       loginButton.style.display = "block";
   }
+  
 
   // Handle login
   document.querySelector("#get-otp button").addEventListener("click", function (event) {

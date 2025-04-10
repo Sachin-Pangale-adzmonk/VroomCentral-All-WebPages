@@ -13,8 +13,7 @@ const products = [
     category: "Cars",
     name: "Mercedes-Benz G-Class",
     image: "Images/mercedes-benz-g-class-1.jpg",
-    description:
-      "The Mercedes-Benz G-Class, also known as the G-Wagon, is an iconic SUV etc...",
+    description:"The Mercedes-Benz G-Class, also known as the G-Wagon, is an iconic SUV etc...",
     link: "Mercedes-Benz-G-Class.html",
     views: "25k+ Views",
   },
